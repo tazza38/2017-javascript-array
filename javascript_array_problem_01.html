@@ -4,7 +4,33 @@
     <script type="text/javascript">
         function calculate(arr) {
           var result = 0;
-          // TODO : 여기에 여러분이 직접 코딩을 해주세요.       
+		  var tmp = '';
+		  var num = '';
+
+		  tmp = arr.splice(0,3);
+		  
+		  for (var i = 0; i<tmp.length; i++)
+		  {	
+			  num += tmp[i];			  
+		  }
+
+		  num = eval(num);
+
+		  for (var j = 0; j<tmp.length+2; j++)
+		  {				  
+			  tmp = arr.splice(0,2);
+			  
+			for (var k = 0; k<tmp.length; k++)
+			{				  
+				num += tmp[k];			  
+			}
+
+		  num = eval(num);
+
+		  }
+
+		  result=eval(num);
+
           return result;
         }
 
